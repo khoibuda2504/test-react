@@ -2,7 +2,7 @@
   "name": "test",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://khoibuda2504.github.io/react-test",
+  "homepage": "https://khoibuda2504.github.io/test-react",
   "type": "module",
   "scripts": {
     "dev": "vite",
