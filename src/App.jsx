@@ -1,7 +1,7 @@
 import vCard from 'vcards-js'
 function App() {
-  const generateVCF= () => {
-    const vcf  = vCard()
+  const generateVCF = () => {
+    const vcf = vCard()
     vcf.firstName = 'BÙI';
     vcf.middleName = 'GIANG';
     vcf.lastName = 'QUỐC TRƯỜNG';

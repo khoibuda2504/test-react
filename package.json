@@ -2,13 +2,17 @@
   "name": "test",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://khoibuda2504.github.io/react-test",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vcards-js": "^2.10.0"
