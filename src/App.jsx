@@ -9,20 +9,20 @@ function App() {
     vcf.workPhone = '0981454722';
     vcf.title = 'TỔNG GIÁM ĐỐC';
     vcf.url = 'http://www.anphugia.com.vn';
-    const data = vcf.getFormattedString()
-    console.log('data: ', data)
-    window.open("data:text/x-vcard;urlencoded," + data);
-    // const linkElement = document.createElement('a')
-    // linkElement.setAttribute('href', `data:,${vcf.getFormattedString()}`)
-    // linkElement.setAttribute('download', 'card.vcf')
-    // linkElement.style.display = 'none'
-    // document.body.appendChild(linkElement)
-    // linkElement.click()
-    // document.body.removeChild(linkElement)
+    const vcard = vcf.getFormattedString()
+    var blob = new Blob([vcard], { type: "text/vcard" });
+    var url = URL.createObjectURL(blob);
+
+    const newLink = document.createElement('a');
+    newLink.download = 'hi' + ".vcf";
+    newLink.textContent = 'hi';
+    newLink.href = url;
+
+    newLink.click();
   }
   return (
     <div className="App">
-      <p onClick={generateVCF}>CLick me</p>
+      <p onClick={generateVCF}>Click me v2</p>
     </div>
   )
 }
